@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 2) do
 
   create_table "book_ownerships", force: :cascade do |t|
     t.integer "book_id"
-    t.integer "user_id"
+    t.string "title"
+    t.string "author"
+    t.string "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -23,14 +25,6 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "title"
     t.string "author"
     t.string "review"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

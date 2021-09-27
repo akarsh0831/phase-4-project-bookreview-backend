@@ -5,13 +5,8 @@ Rails.application.routes.draw do
 
   # get '/login' => "sessions#new"
 
-  post '/sessions' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
-  post '/signup' => 'users#create'
-
   # need to fix nested routing problem
 
-  resources :users
 
   resources :books
 
